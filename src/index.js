@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 10:18:59
- * @LastEditTime: 2021-02-02 13:46:53
+ * @LastEditTime: 2021-02-02 15:10:05
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /main-react/src/index.js
@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps, start } from 'qiankun';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,14 +20,16 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// registerMicroApps([
-//   {
-//     name: 'vueApp',
-//     entry: '//localhost:8080',
-//     container: '#container',
-//     activeRule: '/app-vue',
-//   }
-// ]);
+registerMicroApps([
+  {
+    name: 'vue app',
+    entry: '//localhost:8080',
+    container: '#vue-app',
+    activeRule: '/vue-app',
+  }
+]);
+
+start();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

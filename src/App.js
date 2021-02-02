@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 10:18:59
- * @LastEditTime: 2021-02-02 13:58:28
+ * @LastEditTime: 2021-02-02 15:11:53
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /main-react/src/App.js
@@ -26,15 +26,15 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/vue-app">vue-app</Link>
             </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/vue-app">
+            <VueApp />
           </Route>
           <Route path="/">
             <Home />
@@ -58,6 +58,8 @@ function Home() {
   )
 }
 
-function About() {
-  return <h2>About</h2>;
+function VueApp() {
+  return <div id="vue-app">
+    VueApp
+  </div>;
 }
