@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 10:18:59
- * @LastEditTime: 2021-02-02 15:11:53
+ * @LastEditTime: 2021-02-03 14:48:22
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /main-react/src/App.js
@@ -14,6 +14,7 @@ import {
   Link
 } from "react-router-dom";
 import logo from './logo.svg';
+import Combination from './components/Combination';
 import './App.css';
 
 export default function App() {
@@ -28,6 +29,9 @@ export default function App() {
             <li>
               <Link to="/vue-app">vue-app</Link>
             </li>
+            <li>
+              <Link to="/combination">combination</Link>
+            </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
@@ -35,6 +39,9 @@ export default function App() {
         <Switch>
           <Route path="/vue-app">
             <VueApp />
+          </Route>
+          <Route path="/combination">
+            <Combination />
           </Route>
           <Route path="/">
             <Home />
@@ -59,7 +66,5 @@ function Home() {
 }
 
 function VueApp() {
-  return <div id="vue-app">
-    VueApp
-  </div>;
+  return <div id="vue-app"></div>;
 }

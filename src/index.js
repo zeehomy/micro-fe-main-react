@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 10:18:59
- * @LastEditTime: 2021-02-02 15:10:05
+ * @LastEditTime: 2021-02-02 18:46:07
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /main-react/src/index.js
@@ -15,7 +15,7 @@ import { registerMicroApps, start } from 'qiankun';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />,
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
