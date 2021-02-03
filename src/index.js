@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 10:18:59
- * @LastEditTime: 2021-02-02 18:46:07
+ * @LastEditTime: 2021-02-03 17:30:12
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /main-react/src/index.js
@@ -23,7 +23,7 @@ ReactDOM.render(
 registerMicroApps([
   {
     name: 'vue app',
-    entry: '//localhost:8080',
+    entry: process.env.NODE_ENV === 'production' ? '/child/vue-history/' : '//localhost:8080',
     container: '#vue-app',
     activeRule: '/vue-app',
   }
